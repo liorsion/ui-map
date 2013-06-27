@@ -1,4 +1,3 @@
-
 $("#map").hide();
 requireCss('assets/css/demos.css');
 
@@ -46,6 +45,7 @@ requirejs(
           $scope.currentMarker = marker;
           $scope.currentMarkerLat = marker.getPosition().lat();
           $scope.currentMarkerLng = marker.getPosition().lng();
+          $scope.$apply();
           $scope.myInfoWindow.open($scope.myMap, marker);
         };
 
